@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>image/btn_add.png</file>
+        <file>image/btn_add_disabled.png</file>
+        <file>image/btn_add_hover.png</file>
+        <file>image/btn_add_pressed.png</file>
+        <file>image/btn_next.png</file>
+        <file>image/btn_next_disabled.png</file>
+        <file>image/btn_next_hover.png</file>
+        <file>image/btn_next_pressed.png</file>
+        <file>image/btn_pause.png</file>
+        <file>image/btn_pause_disabled.png</file>
+        <file>image/btn_pause_hover.png</file>
+        <file>image/btn_pause_pressed.png</file>
+        <file>image/btn_play.png</file>
+        <file>image/btn_play_disabled.png</file>
+        <file>image/btn_play_hover.png</file>
+        <file>image/btn_play_pressed.png</file>
+        <file>image/btn_previous.png</file>
+        <file>image/btn_previous_disabled.png</file>
+        <file>image/btn_previous_hover.png</file>
+        <file>image/btn_previous_pressed.png</file>
+        <file>image/btn_stop.png</file>
+        <file>image/btn_stop_disabled.png</file>
+        <file>image/btn_stop_hover.png</file>
+        <file>image/btn_stop_pressed.png</file>
+        <file>image/btn_volume.png</file>
+        <file>image/btn_volume_hover.png</file>
+        <file>image/btn_volume_pressed.png</file>
+    </qresource>
+</RCC>

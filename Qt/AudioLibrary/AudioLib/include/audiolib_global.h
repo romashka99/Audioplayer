@@ -1,0 +1,12 @@
+#ifndef AUDIOLIB_GLOBAL_H
+#define AUDIOLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(AUDIOLIB_LIBRARY)
+#  define AUDIOLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define AUDIOLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // AUDIOLIB_GLOBAL_H

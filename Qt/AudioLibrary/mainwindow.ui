@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Проигрыватель аудио</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>100</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_add">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_add{
+	border: none;
+	background-image: url(:/resource/image/btn_add.png);
+}
+
+#btn_add:hover{
+	border: none;
+	background-image:url(:/resource/image/btn_add_hover.png);
+}
+
+#btn_add:pressed{
+	border: none;
+	background-image:url(:/resource/image/btn_add_pressed.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_delete">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>5</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>5</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_delete{
+	border: none;
+	background-color: #ecb0b8;
+}
+
+#btn_delete:hover{
+	border: none;
+	background-color: #b7707d;
+}
+
+#btn_delete:pressed{
+	border: none;
+	background-color: #831c26;
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_previous">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_previous{
+	border: none;
+	background-image: url(:/resource/image/btn_previous.png);
+}
+
+#btn_previous:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_previous_hover.png);
+}
+
+#btn_previous:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_previous_pressed.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_play">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_play{
+	border: none;
+	background-image: url(:/resource/image/btn_play.png);
+}
+
+#btn_play:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_play_hover.png);
+}
+
+#btn_play:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_play_pressed.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_pause">
+        <property name="minimumSize">
+         <size>
+          <width>14</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>14</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_pause{
+	border: none;
+	background-image: url(:/resource/image/btn_pause.png);
+}
+
+#btn_pause:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_pause_hover.png);
+}
+
+#btn_pause:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_pause_pressed.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_stop">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_stop{
+	border: none;
+	background-image: url(:/resource/image/btn_stop.png);
+}
+
+#btn_stop:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_stop_hover.png);
+}
+
+#btn_stop:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_stop_pressed.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_next">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_next{
+	border: none;
+	background-image: url(:/resource/image/btn_next.png);
+}
+
+#btn_next:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_next_hover.png);
+}
+
+#btn_next:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_next_pressed.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="btn_volume">
+          <property name="minimumSize">
+           <size>
+            <width>21</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>21</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#btn_volume{
+	border: none;
+	background-image:url(:/resource/image/btn_volume.png);
+}
+
+#btn_volume:hover{
+	border: none;
+	background-image: url(:/resource/image/btn_volume_hover.png);
+}
+
+#btn_volume:pressed{
+	border: none;
+	background-image: url(:/resource/image/btn_volume_pressed.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="slider_volume">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider::groove:horizontal {
+border: 1px solid #ecb0b8;
+background: white;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+border: 1px solid #ecb0b8;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+background: #fff;
+border: 1px solid #ecb0b8;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #eee, stop:1 #ccc);
+border: 1px solid #ecb0b8;
+width: 13px;
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #fff, stop:1 #ddd);
+border: 1px solid #ecb0b8;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #ecb0b8;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>30</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>100</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="currentAudio">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QSlider" name="slider_durationAudio">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::groove:horizontal {
+border: 1px solid #ecb0b8;
+background: white;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+border: 1px solid #ecb0b8;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+background: #fff;
+border: 1px solid #ecb0b8;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #eee, stop:1 #ccc);
+border: 1px solid #ecb0b8;
+width: 13px;
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #fff, stop:1 #ddd);
+border: 1px solid #ecb0b8;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #ecb0b8;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="editSearch">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_search">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #ecb0b8;
+background-color: #ecb0b8;</string>
+        </property>
+        <property name="text">
+         <string>Поиск</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="listAudio">
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #ecb0b8;
+QTableView::item:focus
+{
+selection-background-color: yellow;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>788</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="addAudio"/>
+    <addaction name="deleteAudio"/>
+    <addaction name="editAudio"/>
+   </widget>
+   <widget class="QMenu" name="menuPlayer">
+    <property name="title">
+     <string>Проигрыватель</string>
+    </property>
+    <addaction name="playAudio"/>
+    <addaction name="stopAudio"/>
+    <addaction name="pauseAudio"/>
+    <addaction name="nextAudio"/>
+    <addaction name="previousAudio"/>
+   </widget>
+   <widget class="QMenu" name="menuPlayList">
+    <property name="title">
+     <string>Плейлист</string>
+    </property>
+    <addaction name="searchAudio"/>
+    <addaction name="sortPlayList"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuPlayer"/>
+   <addaction name="menuPlayList"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="addAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_add.png</normaloff>:/resource/image/btn_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить аудио</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </action>
+  <action name="deleteAudio">
+   <property name="text">
+    <string>Удалить аудио</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="playAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_play.png</normaloff>:/resource/image/btn_play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Воспроизвести</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="nextAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_next.png</normaloff>:/resource/image/btn_next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Переключить вперед</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="previousAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_previous.png</normaloff>:/resource/image/btn_previous.png</iconset>
+   </property>
+   <property name="text">
+    <string>Переключить назад</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="pauseAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_pause.png</normaloff>:/resource/image/btn_pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Пауза</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="stopAudio">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/image/btn_stop.png</normaloff>:/resource/image/btn_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Стоп</string>
+   </property>
+   <property name="shortcut">
+    <string>Backspace</string>
+   </property>
+  </action>
+  <action name="searchAudio">
+   <property name="text">
+    <string>Сбросить поиск</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="sortPlayList">
+   <property name="text">
+    <string>Сортировка</string>
+   </property>
+  </action>
+  <action name="editAudio">
+   <property name="text">
+    <string>Изменить аудио</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
